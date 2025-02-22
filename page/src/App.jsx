@@ -12,6 +12,7 @@ import { SiAwsorganizations } from "react-icons/si";
 import Menu from './pages/menu';
 import Button from './components/button';
 import { useState } from 'react';
+import FormSection from './pages/infra/form';
 
 function App() {
   const [activeTab, setActiveTab] = useState("Users");
@@ -49,29 +50,29 @@ function App() {
         </div>
 
         {/* NavBar Area */}
-        <div className="bg-white mt-8 ml-56 mr-5 gap-5 justify-center items-center rounded-lg w-3/4">
-          <ul className="flex flex-row p-2">
+                <div className="bg-white mt-8 ml-56 mr-5 gap-5 justify-center items-center rounded-lg w-3/4 max-w-full">
+          <ul className="flex flex-wrap p-2 gap-2 justify-between items-center">
             <li
               onClick={() => handleTabClick("Users")}
-              className={`flex flex-row justify-center items-center gap-5 px-20 py-2 rounded-lg font-semibold text-xl ${activeTab === "Users" ? "bg-green-800 text-white" : "hover:bg-green-800 hover:text-white"}`}
+              className={`flex flex-row justify-center items-center gap-5 px-15 py-2 rounded-lg font-semibold text-xl ${activeTab === "Users" ? "bg-green-800 text-white" : "hover:bg-green-800 hover:text-white"}`}
             >
               <FaUsers /> Users
             </li>
             <li
               onClick={() => handleTabClick("Roles")}
-              className={`flex flex-row justify-center items-center gap-5 px-20 py-2 rounded-lg font-semibold text-xl ${activeTab === "Roles" ? "bg-green-800 text-white" : "hover:bg-green-800 hover:text-white"}`}
+              className={`flex flex-row justify-center items-center gap-5 px-15 py-2 rounded-lg font-semibold text-xl ${activeTab === "Roles" ? "bg-green-800 text-white" : "hover:bg-green-800 hover:text-white"}`}
             >
               <PiCirclesThreeLight /> Roles
             </li>
             <li
               onClick={() => handleTabClick("Infrastructure")}
-              className={`flex flex-row justify-center items-center gap-5 px-20 py-2 rounded-lg font-semibold text-xl ${activeTab === "Infrastructure" ? "bg-green-800 text-white" : "hover:bg-green-800 hover:text-white"}`}
+              className={`flex flex-row justify-center items-center gap-5 px-15 py-2 rounded-lg font-semibold text-xl ${activeTab === "Infrastructure" ? "bg-green-800 text-white" : "hover:bg-green-800 hover:text-white"}`}
             >
               <SiAwsorganizations /> Infrastructure
             </li>
             <li
               onClick={() => handleTabClick("Schedules")}
-              className={`flex flex-row justify-center items-center gap-5 px-20 py-2 rounded-lg font-semibold text-xl ${activeTab === "Schedules" ? "bg-green-800 text-white" : "hover:bg-green-800 hover:text-white"}`}
+              className={`flex flex-row justify-center items-center gap-5 px-15 py-2 rounded-lg font-semibold text-xl ${activeTab === "Schedules" ? "bg-green-800 text-white" : "hover:bg-green-800 hover:text-white"}`}
             >
               <RiCalendarScheduleLine /> Schedules
             </li>
@@ -85,9 +86,9 @@ function App() {
           </div>
 
           {activeTab === "Users" && <div><Menu /></div>}
-          {activeTab === "Roles" && <div>Roles Content</div>}
-          {activeTab === "Infrastructure" && <div>Infrastructure Content</div>}
-          {activeTab === "Schedules" && <div>Schedules Content</div>}
+          {/* {activeTab === "Roles" && <div></div>} */}
+          {activeTab === "Infrastructure" && <div><FormSection/></div>}
+          {/* {activeTab === "Schedules" && <div>Schedules Content</div>} */}
         </div>
         <br />
       </div>
