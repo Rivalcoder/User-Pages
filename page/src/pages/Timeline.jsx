@@ -10,7 +10,7 @@ const steps = [
   { id: "01", name: "Personal", completed: true,status:true },
   { id: "02", name: "Academic", completed: true,status:false  },
   { id: "03", name: "Communication", completed: true,status:false  },
-  { id: "04", name: "Class Advisor", completed: false,status:false  },
+  { id: "04", name: "Class Advisor", completed: true,status:false  },
   { id: "05", name: "Health", completed: true,status:false  },
   { id: "06", name: "Additional Info", completed: true,status:false  },
 ];

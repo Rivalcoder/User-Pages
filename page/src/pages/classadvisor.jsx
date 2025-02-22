@@ -7,10 +7,12 @@ import { LuCloudUpload } from "react-icons/lu"
 
 import { MdPhoneInTalk } from "react-icons/md"
 import { useState } from "react"
+import Popup from "../components/popup"
 
 export default function Class()
 {
     const [type,settype]=useState(null)
+    const [popup,setpopup]=useState(false)
     return(
         <>
             <div className="flex flex-row w-full justify-center ">
@@ -18,7 +20,7 @@ export default function Class()
             <div className="flex-3 m-5">
 
                 <div className="flex flex-row justify-between items-center">
-                    <p className="text-xl font-semibold p-2 text-gray-600">Health Details</p>
+                    <p className="text-xl font-semibold p-2 text-gray-600">Class Advisior and Accomadation Details</p>
                     <button className="h-10 w-36 bg-green-800 rounded-lg text-white flex justify-center items-center gap-3"><LuCloudUpload size={22} />Bulk Upload</button>   
                 </div>
 
@@ -146,6 +148,68 @@ export default function Class()
                 </div>
                 </div>
                 </div>
+                
+                <div className="flex flex-col gap-4 mt-4 ">
+                <p className="font-semibold ml-5">Route</p>
+                <div className="flex items-center border rounded-lg bg-gray-200 border-none mx-5">
+                        <div className="pl-5">
+                        <IoPersonOutline />
+                        </div>
+                        <input
+                        type="email"
+                        placeholder="Email Here"
+                        className="p-2 pl-4 pr-12 w-full outline-none border-none"
+                        />
+                        <div className="pl-5">
+                        <button className="p-3" onClick={()=>{setpopup(!popup)}}>Search</button>
+                        {popup &&
+                                <Popup/>
+                        }
+                        </div>
+                </div>
+                </div>
+
+                <div className="flex flex-col gap-4 mt-4 ">
+                <p className="font-semibold ml-5">Stage</p>
+                <div className="flex items-center border rounded-lg bg-gray-200 border-none mx-5">
+                        <div className="pl-5">
+                        <IoPersonOutline />
+                        </div>
+                        <input
+                        type="email"
+                        placeholder="Email Here"
+                        className="p-2 pl-4 pr-12 w-full outline-none border-none"
+                        />
+                        <div className="pl-5">
+                        <button className="p-3" onClick={()=>{setpopup(!popup)}}>Search</button>
+                        {popup &&
+                                <Popup/>
+                        }
+                        
+                        </div>
+                </div>
+                </div>
+
+                <div className="flex flex-col gap-4 mt-4 ">
+                <p className="font-semibold ml-5">Stopping</p>
+                <div className="flex items-center border rounded-lg bg-gray-200 border-none mx-5">
+                        <div className="pl-5">
+                        <IoPersonOutline />
+                        </div>
+                        <input
+                        type="email"
+                        placeholder="Email Here"
+                        className="p-2 pl-4 pr-12 w-full outline-none border-none"
+                        />
+                        <div className="pl-5">
+                        <button className="p-3" onClick={()=>{setpopup(!popup)}}>Search</button>
+                        {popup &&
+                                <Popup/>
+                        }
+                        
+                        </div>
+                </div>
+                </div>
 
 
 
@@ -154,8 +218,8 @@ export default function Class()
                 
                     
                     
-     <div className="flex-2  m-5 mt-12">
-    <div className="flex flex-col justify-center items-center m-2 mt-5">
+     <div className="flex-2  m-5 mt-12 w-full ">
+    <div className="flex flex-col justify-center items-center m-2 mt-5 w-full">
             {type==0 && 
             <div>
                 <div className="flex flex-col gap-4 mt-4 ">
