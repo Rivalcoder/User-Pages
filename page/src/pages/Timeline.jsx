@@ -3,13 +3,15 @@ import Academic from "./academic";
 import Personal from "./personal";
 import Communication from "./communication";
 import Additional from "./Addition";
+import Health from "./Health";
+import Class from "./classadvisor";
 
 const steps = [
   { id: "01", name: "Personal", completed: true,status:true },
   { id: "02", name: "Academic", completed: true,status:false  },
   { id: "03", name: "Communication", completed: true,status:false  },
   { id: "04", name: "Class Advisor", completed: false,status:false  },
-  { id: "05", name: "Health", completed: false,status:false  },
+  { id: "05", name: "Health", completed: true,status:false  },
   { id: "06", name: "Additional Info", completed: true,status:false  },
 ];
 
@@ -23,9 +25,9 @@ const Timeline = () => {
     }else if(lock === 3){
       return <Communication />
     }else if(lock === 4){
-      return null
+      return <Class />
     }else if(lock === 5){
-      return null
+      return <Health />
     }else if(lock === 6){
       return <Additional />
     }
