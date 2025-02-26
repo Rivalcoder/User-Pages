@@ -55,7 +55,7 @@ const Popup = () => {
 
   return (
     isOpen && (
-      <div className="fixed inset-0 bg-opacity-0 z-50 overflow-y-auto h-full w-full" style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)' }}>
+      <div className="fixed inset-0 z-100 overflow-y-auto h-full w-full" style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)' }}>
         <div ref={popupRef} className="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
 
           <div className="mb-4 flex justify-between items-center">

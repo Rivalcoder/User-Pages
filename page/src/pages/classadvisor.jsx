@@ -13,6 +13,9 @@ export default function Class()
 {
     const [type,settype]=useState(null)
     const [popup,setpopup]=useState(false)
+    const [popup1,setpopup1]=useState(false)
+    const [popup2,setpopup2]=useState(false)
+
     return(
         <>
             <div className="flex flex-row w-full justify-center ">
@@ -162,10 +165,11 @@ export default function Class()
                         />
                         <div className="pl-5">
                         <button className="p-3" onClick={()=>{setpopup(!popup)}}>Search</button>
+                        
+                        </div>
                         {popup &&
                                 <Popup/>
                         }
-                        </div>
                 </div>
                 </div>
 
@@ -181,8 +185,8 @@ export default function Class()
                         className="p-2 pl-4 pr-12 w-full outline-none border-none"
                         />
                         <div className="pl-5">
-                        <button className="p-3" onClick={()=>{setpopup(!popup)}}>Search</button>
-                        {popup &&
+                        <button className="p-3" onClick={()=>{setpopup1(!popup2)}}>Search</button>
+                        {popup1 &&
                                 <Popup/>
                         }
                         
@@ -202,8 +206,8 @@ export default function Class()
                         className="p-2 pl-4 pr-12 w-full outline-none border-none"
                         />
                         <div className="pl-5">
-                        <button className="p-3" onClick={()=>{setpopup(!popup)}}>Search</button>
-                        {popup &&
+                        <button className="p-3" onClick={()=>{setpopup2(!popup2)}}>Search</button>
+                        {popup2 &&
                                 <Popup/>
                         }
                         
